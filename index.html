@@ -447,7 +447,7 @@
 
 
                         < <!-- portfolio-item -->
-                            <div class="media-cell design hentry" >
+                            <div class="media-cell design hentry">
 
                                 <div class="media-box">
                                     <img src="images/portfolio/01.png" alt="portfolio-post">
@@ -685,26 +685,23 @@
 
                             <!-- .contact-form -->
                             <div class="contact-form">
-
-                                <form id="contact-form" action="#" method="post">
-
-                                    <!-- enter mail subject here -->
-                                    <input type="hidden" name="subject" id="subject" value="You have a new message from cvCard!">
-
+                                </form>
+                                <form id="gform" name="gform" enctype="text/plain" action=" https://docs.google.com/forms/d/e/1FAIpQLSdENhQxiO_1ns_krzJiOdfAAyAlI5p-t1I8h9W5hUDmZHMYyw/formResponse?"
+                                    target="hidden_iframe" onsubmit="submitted=true;">
                                     <p>
                                         <label for="name">NAME</label>
-                                        <input type="text" name="name" id="name" class="required">
+                                        <input type="text" name="entry.1421494795" id="entry.1421494795" class="required text" required="true">
                                     </p>
 
                                     <p>
                                         <label for="email">EMAIL</label>
-                                        <input type="text" name="email" id="email" class="required email">
+                                        <input type="email" name="entry.553882094" id="entry.553882094" class="required email">
                                     </p>
 
 
                                     <p>
                                         <label for="message">MESSAGE</label>
-                                        <textarea name="message" id="message" class="required"></textarea>
+                                        <textarea name="entry.1494110428" id="entry.1494110428" class="required text" required="true"></textarea>
                                     </p>
 
                                     <p>
@@ -715,11 +712,17 @@
 
                             </div>
                             <!-- .contact-form -->
-
+                            <script src="assets/js/jquery.min.js"></script>
+                            <script type="text/javascript">var submitted = false;</script>
+                            <script type="text/javascript">
+                                $('#gform').on('submit', function (e) {
+                                    $('#gform *').fadeOut(2000);
+                                    $('#gform').prepend('Your submission has been processed...');
+                                    return false;
+                                });
+                            </script>
                         </div>
                         <!-- column 6/12 -->
-
-
                         <!-- column 6/12 -->
                         <div class="col-md-6">
 
